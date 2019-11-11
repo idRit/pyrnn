@@ -3,7 +3,7 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 CORS(app)
-from mn import getQuote
+from mn import getQuote, train
 
 @app.route("/", methods=['GET'])
 def index():     
@@ -22,5 +22,6 @@ def prefixed():
         'quote': quote 
     })
 
+train()
 if __name__ == "__main__":
     app.run(threaded=False, host="0.0.0.0")
