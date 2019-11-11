@@ -7,6 +7,7 @@ from mn import getQuote, train
 
 @app.route("/", methods=['GET'])
 def index():     
+    train()
     return jsonify({
         "success": True,
         "message": "working"
@@ -22,6 +23,5 @@ def prefixed():
         'quote': quote 
     })
 
-train()
 if __name__ == "__main__":
     app.run(threaded=False, host="0.0.0.0")
