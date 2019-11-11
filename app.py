@@ -7,7 +7,7 @@ from mn import getQuote, train
 
 @app.route("/", methods=['GET'])
 def index():     
-    train()
+    #train()
     return jsonify({
         "success": True,
         "message": "working"
