@@ -10,7 +10,7 @@ from bck import upload
 
 def getQuote (pref=""):
     textgen_2 = textgenrnn('textgenrnn_weights.hdf5')
-    generated_texts = textgen_2.generate(n=1, prefix=pref, return_as_list=True)
+    generated_texts = textgen_2.generate(n=1, prefix=pref, return_as_list=True, temparature=0.6)
     print(generated_texts)
     #tfjs.converters.save_keras_model('textgenrnn_weights.hdf5', '')
     return generated_texts
